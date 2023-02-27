@@ -57,7 +57,7 @@ public class JacocoReportPlugin implements Plugin<Project> {
   }
 
   private void configureExistingReport(JacocoReport reportTask, Test testTask) {
-    reportTask.getReports().getXml().setEnabled(true);
+    reportTask.getReports().getXml().getRequired().set(true);
     reportTask.dependsOn(testTask);
   }
 
